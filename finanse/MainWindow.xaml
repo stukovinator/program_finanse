@@ -1,0 +1,142 @@
+﻿<Window x:Class="finanse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wf="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+        xmlns:local="clr-namespace:finanse"
+        mc:Ignorable="d"
+        Title="ZARZĄDZAJ FINANSAMI" Height="550" Width="600"
+        Background="#242424"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize">
+    <StackPanel>
+        <StackPanel VerticalAlignment="Top" Height="50" Orientation="Horizontal" HorizontalAlignment="center" Width="600">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="BlueViolet"/>
+                    <GradientStop Color="#620BB3" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+            <Grid Width="600">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="20, 0, 0, 0">
+                    <Image Source="account.png" Height="25"/>
+                    <Label Content="KRZYSZTOF DENICKI" Foreground="White" VerticalAlignment="Center" FontSize="14" FontFamily="/fonts/#Roboto Medium"/>
+                </StackPanel>
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0, 0, 20, 0">
+                    <Image Source="finances.png" Height="25" Margin="0, 0, 10, 0"/>
+                    <Image Source="notifications.png" Height="25" Margin="10, 0, 10, 0"/>
+                    <Image Source="stats.png" Height="25" Margin="10, 0, 0, 0"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Width="600">
+            <Grid Margin="30, 30, 30, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="260"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="290"/>
+                </Grid.ColumnDefinitions>
+
+                <!--INFORMACJA-->
+                <StackPanel Grid.Row="0" Grid.Column="0">
+                    <StackPanel.Effect>
+                        <DropShadowEffect Opacity="0.35"/>
+                    </StackPanel.Effect>
+                    <Border Background="#242424" BorderThickness="2" CornerRadius="3" Margin="5, 0, 5, 0">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="BlueViolet"/>
+                                <GradientStop Color="#620BB3" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel>
+                            <Label Margin="5, 5, 5, 0" HorizontalContentAlignment="Center" Content="Dzień dobry!" FontSize="14" Foreground="White" FontFamily="/fonts/#Roboto Medium"/>
+                            <TextBlock Margin="5, 5, 5, 5" HorizontalAlignment="Center" Foreground="White" FontFamily="/fonts/#Roboto Light" Text="Oto twój panel do zarządzania finansami. Na górnym pasku nawigacyjnym znajdziesz ikony prowadzące do innych funkcjonalności programu." TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+
+                <!--OSTATNIE WYDATKI-->
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                    <StackPanel.Effect>
+                        <DropShadowEffect Opacity="0.35"/>
+                    </StackPanel.Effect>
+                    <Border Background="#242424" BorderThickness="2" CornerRadius="3" Margin="5, 0, 5, 0">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="BlueViolet"/>
+                                <GradientStop Color="#620BB3" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel>
+                            <Label Margin="5, 5, 5, 5" HorizontalContentAlignment="Center" Content="OSTATNIE TRANSAKCJE" FontSize="14" Foreground="White" FontFamily="/fonts/#Roboto Medium"/>
+                        </StackPanel>
+                    </Border>
+
+                    <StackPanel x:Name="LAST_TRANSACTIONS_LIST">
+
+                        <Border Background="#242424" BorderThickness="2" CornerRadius="3" Margin="5, 5, 5, 0">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="BlueViolet"/>
+                                    <GradientStop Color="#620BB3" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <StackPanel Margin="0">
+                                <Grid Margin="0, 5, 0, 5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="BIEDRONKA" HorizontalContentAlignment="Left" Margin="10, 0, 0, 0" Foreground="White" Grid.Row="0" Grid.Column="0" FontFamily="/fonts/#Roboto Regular"/>
+                                    <Label Content="-54,21" HorizontalContentAlignment="Right" Margin="0, 0, 10, 0" Foreground="IndianRed" Grid.Row="0" Grid.Column="1" FontFamily="/fonts/#Roboto Light"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Grid.RowSpan="2">
+                    <StackPanel.Effect>
+                        <DropShadowEffect Opacity="0.35"/>
+                    </StackPanel.Effect>
+                    <Border BorderThickness="2" CornerRadius="3" Height="380">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="BlueViolet"/>
+                                <GradientStop Color="#620BB3" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel Margin="5">
+                            <WindowsFormsHost Height="365">
+                                <wf:Chart x:Name="chart1" Palette="Berry" BackColor="Transparent">
+                                    <wf:Chart.Series>
+                                        <wf:Series ChartType="Column"/>
+                                    </wf:Chart.Series>
+                                    <wf:Chart.ChartAreas>
+                                        <wf:ChartArea BackColor="Transparent"/>
+                                    </wf:Chart.ChartAreas>
+                                </wf:Chart>
+                            </WindowsFormsHost>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+
+    </StackPanel>
+</Window>
