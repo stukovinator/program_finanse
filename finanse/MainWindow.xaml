@@ -18,6 +18,7 @@
                     <GradientStop Color="#620BB3" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
+            
             <Grid Width="600">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
