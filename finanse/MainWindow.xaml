@@ -32,7 +32,6 @@
                     <Image Source="account.png" Height="25"/>
                     <Label Content="UŻYTKOWNIK" Foreground="White" VerticalAlignment="Center" FontSize="14" FontFamily="/fonts/#Roboto Medium"/>
                 </StackPanel>
-                
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0, 0, 20, 0">
                     <Image Source="finances.png" Height="25" Margin="0, 0, 10, 0"/>
                     <Image Source="notifications.png" Height="25" Margin="10, 0, 10, 0"/>
