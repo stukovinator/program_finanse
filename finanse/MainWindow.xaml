@@ -11,7 +11,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
     <StackPanel>
-        <StackPanel VerticalAlignment="Top" Height="50" Orientation="Horizontal" HorizontalAlignment="center" Width="600">
+        <StackPanel x:Name="NAV_BAR" VerticalAlignment="Top" Height="50" Orientation="Horizontal" HorizontalAlignment="center" Width="600">
             <StackPanel.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="BlueViolet"/>
@@ -29,7 +29,7 @@
 
                 <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="20, 0, 0, 0">
                     <Image Source="account.png" Height="25"/>
-                    <Label Content="KRZYSZTOF DENICKI" Foreground="White" VerticalAlignment="Center" FontSize="14" FontFamily="/fonts/#Roboto Medium"/>
+                    <Label Content="UŻYTKOWNIK" Foreground="White" VerticalAlignment="Center" FontSize="14" FontFamily="/fonts/#Roboto Medium"/>
                 </StackPanel>
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0, 0, 20, 0">
                     <Image Source="finances.png" Height="25" Margin="0, 0, 10, 0"/>
@@ -39,15 +39,15 @@
             </Grid>
         </StackPanel>
 
-        <StackPanel Width="600">
-            <Grid Margin="30, 30, 30, 0">
+        <StackPanel x:Name="STARTER_TAB" Width="600" Visibility="Visible">
+            <Grid Margin="0, 30, 0, 0" HorizontalAlignment="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="120"/>
                     <RowDefinition Height="260"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="250"/>
-                    <ColumnDefinition Width="290"/>
+                    <ColumnDefinition Width="280"/>
+                    <ColumnDefinition Width="320"/>
                 </Grid.ColumnDefinitions>
 
                 <!--INFORMACJA-->
@@ -87,8 +87,7 @@
                         </StackPanel>
                     </Border>
 
-                    <StackPanel x:Name="LAST_TRANSACTIONS_LIST">
-
+                    <StackPanel x:Name="LAST_TRANSACTIONS_LIST" Grid.Row="1" Grid.Column="0">
                         <Border Background="#242424" BorderThickness="2" CornerRadius="3" Margin="5, 5, 5, 0">
                             <Border.BorderBrush>
                                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -114,7 +113,7 @@
                     <StackPanel.Effect>
                         <DropShadowEffect Opacity="0.35"/>
                     </StackPanel.Effect>
-                    <Border BorderThickness="2" CornerRadius="3" Height="380">
+                    <Border BorderThickness="2" CornerRadius="3" Width="279" Height="380" Margin="5, 0, 10, 0">
                         <Border.BorderBrush>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="BlueViolet"/>
@@ -122,7 +121,7 @@
                             </LinearGradientBrush>
                         </Border.BorderBrush>
                         <StackPanel Margin="5">
-                            <WindowsFormsHost Height="365">
+                            <WindowsFormsHost Height="365" Width="265">
                                 <wf:Chart x:Name="chart1" Palette="Berry" BackColor="Transparent">
                                     <wf:Chart.Series>
                                         <wf:Series ChartType="Column"/>

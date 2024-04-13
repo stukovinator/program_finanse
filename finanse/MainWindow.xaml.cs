@@ -36,7 +36,7 @@ namespace finanse
 
             var p2 = new DataPoint(2, 5216.52)
             {
-                AxisLabel = "ZAROBKI",
+                AxisLabel = "ZAROBKI\n(5216.52)",
                 Color = System.Drawing.Color.BlueViolet,
                 BackSecondaryColor = System.Drawing.ColorTranslator.FromHtml("#620BB3"),
                 BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom
