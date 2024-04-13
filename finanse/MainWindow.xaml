@@ -10,6 +10,7 @@
         Background="#242424"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize">
+    
     <StackPanel>
         <StackPanel x:Name="NAV_BAR" VerticalAlignment="Top" Height="50" Orientation="Horizontal" HorizontalAlignment="center" Width="600">
             <StackPanel.Background>
