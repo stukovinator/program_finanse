@@ -9,7 +9,8 @@
         Title="ZARZĄDZAJ FINANSAMI" Height="550" Width="600"
         Background="#242424"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="CanMinimize">
+        ResizeMode="CanMinimize"
+        Icon="icon.ico">
     
     <StackPanel>
         <StackPanel x:Name="NAV_BAR" VerticalAlignment="Top" Height="50" Orientation="Horizontal" HorizontalAlignment="center" Width="600">
@@ -30,14 +31,76 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="20, 0, 0, 0">
-                    <Image Source="account.png" Height="25"/>
-                    <Label Content="UŻYTKOWNIK" Foreground="White" VerticalAlignment="Center" FontSize="14" FontFamily="/fonts/#Roboto Medium"/>
+                    <Border Height="30" Margin="0, 0, 10, 0" Padding="5, 0, 5, 0" BorderBrush="White" BorderThickness="2" CornerRadius="5">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="272" BlurRadius="10" Opacity="0.5"/>
+                        </Border.Effect>
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#9059C3"/>
+                                <GradientStop Color="#493261" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="account.png" Height="25"/>
+                            <Label Content="KRZYSZTOF" Foreground="White" VerticalAlignment="Center" FontSize="14" FontFamily="/fonts/#Roboto Medium"/>
+                        </StackPanel>
+                    </Border>
+                    
                 </StackPanel>
                 
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0, 0, 20, 0">
-                    <Image Source="finances.png" Height="25" Margin="0, 0, 10, 0"/>
-                    <Image Source="notifications.png" Height="25" Margin="10, 0, 10, 0"/>
-                    <Image Source="stats.png" Height="25" Margin="10, 0, 0, 0"/>
+                    <Border Height="30" Width="30" Margin="0, 0, 10, 0" BorderBrush="White" BorderThickness="2" CornerRadius="15">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="272" BlurRadius="10" Opacity="0.5"/>
+                        </Border.Effect>
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#9059C3"/>
+                                <GradientStop Color="#493261" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Image Source="home.png" Height="20" Margin="0, 0, 0, 2.5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+
+                    <Border Height="30" Width="30" Margin="10, 0, 10, 0" BorderBrush="White" BorderThickness="2" CornerRadius="15">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="272" BlurRadius="10" Opacity="0.5"/>
+                        </Border.Effect>
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#9059C3"/>
+                                <GradientStop Color="#493261" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Image Source="finances.png" Height="20" Margin="0, 0, 1, 0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+
+                    <Border Height="30" Width="30" Margin="10, 0, 10, 0" BorderBrush="White" BorderThickness="2" CornerRadius="15">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="272" BlurRadius="10" Opacity="0.5"/>
+                        </Border.Effect>
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#9059C3"/>
+                                <GradientStop Color="#493261" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Image Source="notifications.png" Height="20" Margin="0, 0, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+
+                    <Border Height="30" Width="30" Margin="10, 0, 0, 0" BorderBrush="White" BorderThickness="2" CornerRadius="15">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="272" BlurRadius="10" Opacity="0.5"/>
+                        </Border.Effect>
+                        <Border.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#9059C3"/>
+                                <GradientStop Color="#493261" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Image Source="stats.png" Height="20" Margin="0, 0, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
                 </StackPanel>
             </Grid>
         </StackPanel>
@@ -46,7 +109,7 @@
             <Grid Margin="0, 30, 0, 0" HorizontalAlignment="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="120"/>
-                    <RowDefinition Height="260"/>
+                    <RowDefinition Height="275"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="280"/>
@@ -89,26 +152,11 @@
                             <Label Margin="5, 5, 5, 5" HorizontalContentAlignment="Center" Content="OSTATNIE TRANSAKCJE" FontSize="14" Foreground="White" FontFamily="/fonts/#Roboto Medium"/>
                         </StackPanel>
                     </Border>
-
+                    
                     <StackPanel x:Name="LAST_TRANSACTIONS_LIST" Grid.Row="1" Grid.Column="0">
-                        <Border Background="#242424" BorderThickness="2" CornerRadius="3" Margin="5, 5, 5, 0">
-                            <Border.BorderBrush>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="BlueViolet"/>
-                                    <GradientStop Color="#620BB3" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Border.BorderBrush>
-                            <StackPanel Margin="0">
-                                <Grid Margin="0, 5, 0, 5">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Label Content="BIEDRONKA" HorizontalContentAlignment="Left" Margin="10, 0, 0, 0" Foreground="White" Grid.Row="0" Grid.Column="0" FontFamily="/fonts/#Roboto Regular"/>
-                                    <Label Content="-54,21" HorizontalContentAlignment="Right" Margin="0, 0, 10, 0" Foreground="IndianRed" Grid.Row="0" Grid.Column="1" FontFamily="/fonts/#Roboto Light"/>
-                                </Grid>
-                            </StackPanel>
-                        </Border>
+                        <!--PRZYKŁADOWY ELEMENT-->
+                        
+                        
                     </StackPanel>
                 </StackPanel>
 
@@ -116,7 +164,7 @@
                     <StackPanel.Effect>
                         <DropShadowEffect Opacity="0.35"/>
                     </StackPanel.Effect>
-                    <Border BorderThickness="2" CornerRadius="3" Width="279" Height="380" Margin="5, 0, 10, 0">
+                    <Border BorderThickness="2" CornerRadius="3" Width="279" Height="382" Margin="5, 0, 10, 0">
                         <Border.BorderBrush>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <GradientStop Color="BlueViolet"/>
@@ -124,7 +172,7 @@
                             </LinearGradientBrush>
                         </Border.BorderBrush>
                         <StackPanel Margin="5">
-                            <WindowsFormsHost Height="365" Width="265">
+                            <WindowsFormsHost Height="368" Width="265">
                                 <wf:Chart x:Name="chart1" Palette="Berry" BackColor="Transparent">
                                     <wf:Chart.Series>
                                         <wf:Series ChartType="Column"/>

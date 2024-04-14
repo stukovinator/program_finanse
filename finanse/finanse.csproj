@@ -117,5 +117,14 @@
     <Resource Include="notifications.png" />
     <Resource Include="stats.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="transakcje.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="home.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,9 @@
+biedronka;24.96
+aldi;52.99
+orlen;199.24
+mcdonald's;63.12
+ikea;249.78
+nike.com;321.41
+allegro.com;76.31
+empik;49.99
+biedronka;54.21
