@@ -118,13 +118,16 @@
     <Resource Include="stats.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="transakcje.txt" />
+    <Resource Include="wydatki.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="zarobki.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

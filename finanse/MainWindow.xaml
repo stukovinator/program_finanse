@@ -11,7 +11,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize"
         Icon="icon.ico">
-    
+
     <StackPanel>
         <StackPanel x:Name="NAV_BAR" VerticalAlignment="Top" Height="50" Orientation="Horizontal" HorizontalAlignment="center" Width="600">
             <StackPanel.Background>
@@ -20,7 +20,7 @@
                     <GradientStop Color="#620BB3" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            
+
             <Grid Width="600">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
@@ -46,11 +46,11 @@
                             <Label Content="KRZYSZTOF" Foreground="White" VerticalAlignment="Center" FontSize="14" FontFamily="/fonts/#Roboto Medium"/>
                         </StackPanel>
                     </Border>
-                    
+
                 </StackPanel>
-                
+
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0, 0, 20, 0">
-                    <Border Height="30" Width="30" Margin="0, 0, 10, 0" BorderBrush="White" BorderThickness="2" CornerRadius="15">
+                    <Border Height="30" Width="30" Margin="0, 0, 10, 0" Tag="HOME_BTN" MouseLeftButtonDown="navigationButton" BorderBrush="White" BorderThickness="2" CornerRadius="15">
                         <Border.Effect>
                             <DropShadowEffect Direction="272" BlurRadius="10" Opacity="0.5"/>
                         </Border.Effect>
@@ -63,7 +63,7 @@
                         <Image Source="home.png" Height="20" Margin="0, 0, 0, 2.5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
 
-                    <Border Height="30" Width="30" Margin="10, 0, 10, 0" BorderBrush="White" BorderThickness="2" CornerRadius="15">
+                    <Border Height="30" Width="30" Margin="10, 0, 10, 0" Tag="TRANS_BTN" MouseLeftButtonDown="navigationButton" BorderBrush="White" BorderThickness="2" CornerRadius="15">
                         <Border.Effect>
                             <DropShadowEffect Direction="272" BlurRadius="10" Opacity="0.5"/>
                         </Border.Effect>
@@ -76,7 +76,7 @@
                         <Image Source="finances.png" Height="20" Margin="0, 0, 1, 0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
 
-                    <Border Height="30" Width="30" Margin="10, 0, 10, 0" BorderBrush="White" BorderThickness="2" CornerRadius="15">
+                    <Border Height="30" Width="30" Margin="10, 0, 10, 0" Tag="PAYMENTS_BTN" MouseLeftButtonDown="navigationButton" BorderBrush="White" BorderThickness="2" CornerRadius="15">
                         <Border.Effect>
                             <DropShadowEffect Direction="272" BlurRadius="10" Opacity="0.5"/>
                         </Border.Effect>
@@ -89,7 +89,7 @@
                         <Image Source="notifications.png" Height="20" Margin="0, 0, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
 
-                    <Border Height="30" Width="30" Margin="10, 0, 0, 0" BorderBrush="White" BorderThickness="2" CornerRadius="15">
+                    <Border Height="30" Width="30" Margin="10, 0, 0, 0" Tag="STATS_BTN" MouseLeftButtonDown="navigationButton" BorderBrush="White" BorderThickness="2" CornerRadius="15">
                         <Border.Effect>
                             <DropShadowEffect Direction="272" BlurRadius="10" Opacity="0.5"/>
                         </Border.Effect>
@@ -105,7 +105,7 @@
             </Grid>
         </StackPanel>
 
-        <StackPanel x:Name="STARTER_TAB" Width="600" Visibility="Visible">
+        <StackPanel x:Name="HOME_TAB" Width="600" Visibility="Collapsed">
             <Grid Margin="0, 30, 0, 0" HorizontalAlignment="Center">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="120"/>
@@ -149,14 +149,14 @@
                             </LinearGradientBrush>
                         </Border.BorderBrush>
                         <StackPanel>
-                            <Label Margin="5, 5, 5, 5" HorizontalContentAlignment="Center" Content="OSTATNIE TRANSAKCJE" FontSize="14" Foreground="White" FontFamily="/fonts/#Roboto Medium"/>
+                            <Label Margin="5, 5, 5, 5" HorizontalContentAlignment="Center" Content="OSTATNIE WYDATKI" FontSize="14" Foreground="White" FontFamily="/fonts/#Roboto Medium"/>
                         </StackPanel>
                     </Border>
-                    
+
                     <StackPanel x:Name="LAST_TRANSACTIONS_LIST" Grid.Row="1" Grid.Column="0">
                         <!--PRZYKŁADOWY ELEMENT-->
-                        
-                        
+
+
                     </StackPanel>
                 </StackPanel>
 
@@ -188,5 +188,78 @@
             </Grid>
         </StackPanel>
 
+        <StackPanel x:Name="TRANSACTIONS_TAB" Width="600" Visibility="Visible">
+            <Grid Margin="10, 30, 0, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="345"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="280"/>
+                    <ColumnDefinition Width="280"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Row="0" Grid.Column="0">
+                    <Border Background="#242424" BorderThickness="2" CornerRadius="3" Margin="5, 5, 5, 5">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="BlueViolet"/>
+                                <GradientStop Color="#620BB3" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel>
+                            <Label Margin="5, 5, 5, 5" HorizontalContentAlignment="Center" Content="SPIS WYDATKÓW" FontSize="14" Foreground="White" FontFamily="/fonts/#Roboto Medium"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Grid.Row="0" Grid.Column="1">
+                    <Border Background="#242424" BorderThickness="2" CornerRadius="3" Margin="5, 5, 5, 5">
+                        <Border.BorderBrush>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="BlueViolet"/>
+                                <GradientStop Color="#620BB3" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.BorderBrush>
+                        <StackPanel>
+                            <Label Margin="5, 5, 5, 5" HorizontalContentAlignment="Center" Content="SPIS PRZYCHDÓW" FontSize="14" Foreground="White" FontFamily="/fonts/#Roboto Medium"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                    <ScrollViewer MaxHeight="345" Width="265" Margin="15, 5, 15, 5" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+                        <StackPanel x:Name="ALL_EXPENSES_LIST" Orientation="Vertical">
+                            <!--generuj-->
+                            
+
+                            
+                        </StackPanel>
+                        
+                    </ScrollViewer>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Grid.Column="1">
+                    <ScrollViewer MaxHeight="345" Width="265" Margin="15, 5, 15, 5" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible">
+                        <StackPanel x:Name="ALL_EARNINGS_LIST"  Orientation="Vertical">
+                            <!--generuj-->
+
+
+
+                        </StackPanel>
+
+                    </ScrollViewer>
+                </StackPanel>
+
+            </Grid>
+        </StackPanel>
+
+        <StackPanel x:Name="PAYMENTS_TAB" Width="600" Visibility="Collapsed">
+            <Label Content="oplaty"/>
+        </StackPanel>
+
+        <StackPanel x:Name="STATS_TAB" Width="600" Visibility="Collapsed">
+            <Label Content="statystyki"/>
+        </StackPanel>
     </StackPanel>
 </Window>

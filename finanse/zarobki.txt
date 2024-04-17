@@ -1,0 +1,8 @@
+google;7451.45;wyplata
+nike.com;321.41;zwrot
+adam kowalski;100.00;przelew
+wplatomat;200.00;wplata
+wplatomat;150.00;wplata
+szymon józef;42.11;przelew
+urzad skarbowy;23.85;zwrot
+anna kmicic;40.00;przelew

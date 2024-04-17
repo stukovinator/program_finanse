@@ -1,0 +1,11 @@
+biedronka;24.96;zakupy
+aldi;52.99;zakupy
+orlen;199.24;uslugi
+mcdonald's;63.12;uslugi
+ikea;249.78;zakupy
+nike.com;321.41;zakupy
+allegro.com;76.31;zakupy
+empik;49.99;zakupy
+biedronka;54.21;zakupy
+spotify;30.00;oplata
+rtv.euro.agd;320.00;oplata
